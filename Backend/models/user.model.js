@@ -23,6 +23,11 @@ const userSchema = new mongoose.Schema(
     branch: {
       type: String,
       required: true
+    },
+    activeSemesterId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Semester",
+      default: null
     }
   },
   { timestamps: true }

@@ -8,13 +8,17 @@ const app = express();
 
 // Import Routes
 import authRoutes from "./routes/auth.routes.js";
+import semesterRoutes from "./routes/semester.routes.js";
+import userRoutes from "./routes/user.routes.js";
 
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Routes
-app.use("/api/auth", authRoutes);
+app.use("/auth", authRoutes);
+app.use("/semesters", semesterRoutes);
+app.use("/user", userRoutes);
 
 // Connect to Database
 connectDB();
