@@ -13,6 +13,7 @@ import semesterRoutes from "./routes/semester.routes.js";
 import userRoutes from "./routes/user.routes.js";
 import subjectRoutes from "./routes/subject.routes.js";
 import noteRoutes from "./routes/note.routes.js";
+import aiAssistantRoutes from "./routes/aiAssistant.routes.js";
 
 // Middleware
 app.use(express.json());
@@ -25,7 +26,7 @@ app.use("/semesters", semesterRoutes);
 app.use("/user", userRoutes);
 app.use("/subjects", subjectRoutes);
 app.use("/notes", noteRoutes);
-
+app.use("/ai", aiAssistantRoutes);
 // Connect to Database
 connectDB();
 
